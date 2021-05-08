@@ -23,7 +23,15 @@ services:
         restart: always
         volumes: 
             - db-data:/var/lib/postgresql/data/pgdata
-
+    adminer:
+        image: adminer
+        restart: always
+        depends_on: 
+            - mydb
+        networks:
+            - my-network
+        ports:
+        - 8080:8080
 networks:
     my-network:
         driver: bridge
