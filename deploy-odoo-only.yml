@@ -9,6 +9,7 @@ services:
         restart: always
         volumes: 
             - ./custom_modules:/mnt/extra-addons
+            - ./config:/etc/odoo
             - web-data1:/var/lib/odoo
         networks:
             - my-network
