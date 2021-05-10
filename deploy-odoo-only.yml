@@ -1,20 +1,20 @@
 version: '3.7'
 services:
-    web3:
+    web:
         image: odoo:12.0
         ports:
-            - "8085:8069"
+            - "8087:8069"
         env_file:
             - odoo.env
         restart: always
         volumes: 
             - ./custom_modules:/mnt/extra-addons
             - ./config:/etc/odoo
-            - web-data1:/var/lib/odoo
+            - web-data:/var/lib/odoo
         networks:
             - my-network
 networks:
     my-network:
         driver: bridge
 volumes:
-    web-data1:
+    web-data:

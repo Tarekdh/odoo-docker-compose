@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="0">
+    <record id="module_installed_rule" model="ir.rule">
+        <field name="name">show only installed modules</field>
+        <field name="model_id" ref="model_ir_module_module"/>
+        <field eval="True" name="global"/>
+        <field name="domain_force">[('state','=','installed')]</field>
+    </record>
+</data>
+</odoo>

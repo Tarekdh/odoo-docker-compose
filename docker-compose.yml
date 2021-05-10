@@ -39,13 +39,3 @@ networks:
 volumes:
     db-data:
     web-data:
-
-        
-        
-        
-
-
-
-    
-
-        
